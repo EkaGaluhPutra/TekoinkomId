@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&family=Pangolin&family=Roboto&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color:rgba(34, 49, 52, 0.9);
+    width: 100%;
+    z-index: 10;
+}
+
+header .logo {
+    height: 65px;
+    line-height: 65px;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Pangolin', cursive;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    height: 65px;
+    line-height: 65px;
+    padding: 0 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+header nav ul li a:hover {
+    color: white;
+    background: #2196f3;
+}
+
+header .menu-toggle {
+    color: white;
+    line-height: 65px;
+    float: right;
+    cursor: pointer;
+    font-size: 25px;
+    display: none;
+}
+
+header .menu-toggle .fa {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: left;
+}
+
+.top {
+    background-image: url(./img/top_en.jpg);
+    background-size: cover;
+    padding: 220px 0 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.top h1 {
+    font-size: 80px;
+    font-family: 'Pangolin', cursive;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.top h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.top .content-top {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.btn-top {
+    margin: 20px 0;
+}
+
+.btn-top p {
+    margin: 8px 0;
+}
+
+.email {
+    background-color: #d92027;
+}
+
+.facebook {
+    background-color: #1b6ca8;
+    margin-right: 10px;
+}
+
+.twitter {
+    background-color: #5fdde5;
+}
+
+.btn {
+    padding: 12px 24px;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    opacity: 0.8;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fa {
+    margin-right: 10px;
+    padding:0;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.kelas {
+    background-color: #008891;
+    text-align: center;
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.title-kelas {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: 'Pangolin', cursive;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.card-kelas {
+    float: left;
+    width: 25%;
+}
+
+.card-icon-kelas {
+    position: relative;
+}
+
+.card-icon-kelas p {
+    position: absolute;
+    color: white;
+    width: 100%;
+    top: 32%;
+    font-size: 20px;
+}
+
+.txt-card-kelas {
+    display: inline-block;
+    width: 90%;
+    font-size: 15px;
+    color: white;
+}
+
+.contact-us {
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: #878ecd;
+    color: white;
+}
+
+.title-contact {
+    padding-top: 30px;
+}
+
+.title-contact h1 {
+    font-family: 'Pangolin', cursive;
+    font-size: 35px;
+    letter-spacing: 1px;
+    padding:0;
+    /* margin: 0; */
+    margin-bottom: 0;
+}
+
+.title-contact p {
+    margin-top: 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.whatsapp {
+    background-color: #1fab89;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    background-color: rgba(38, 80, 87, 0.9);
+    color: white;
+}
+
+footer h2{
+    font-family: 'Pangolin', cursive;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+@media (max-width:1024px) {
+    .card-kelas {
+        width: 50%;
+        margin-bottom: 50px;       
+    }
+    .kelas .title-kelas {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:720px) {
+    header .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 65px;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    header nav.active {
+        left: 0;
+    } 
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-kelas {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .facebook {
+        margin-bottom: 10px;
+    }
+
+    .top {
+        text-align: left;
+    }
+
+    .top h1 {
+        font-size: 60px;
+        line-height: 36px;
+    }
+
+    .top h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .top .content-top {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .whatsapp {
+        margin-bottom: 10px;
+    }
+
+    .contact-us {
+        text-align: left;
+    }
+
+    .title-contact h1 {
+        font-size: 35px;
+    }
+
+    .title-kelas h2 {
+        font-size: 23px;
+    }
+
+}
